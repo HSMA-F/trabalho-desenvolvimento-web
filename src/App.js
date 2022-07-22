@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Login from "./paginas/Login/Login";
+import CadastroUsuario from "./paginas/CadastroUsuario/CadastroUsuario.jsx";
+import CadastroEvento from "./paginas/CadastroEvento/CadastroEvento.jsx";
+import CompraIngresso from "./paginas/CompraIngresso/CompraIngresso";
+import Pagamento from "./paginas/pagamento/Pagamento";
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+  <Routes>
+      <Route path="/" element={<Login/>} />
+      <Route path="/cadastro" element={<CadastroUsuario/>}/>
+      <Route path="/cadastro-evento" element={<CadastroEvento/>}/>
+      <Route path="/compra-ingresso" element={<CompraIngresso/>}/>
+      <Route path="/pagamento" element={<Pagamento/>}/>
+  </Routes>
+</BrowserRouter>
     </div>
   );
 }

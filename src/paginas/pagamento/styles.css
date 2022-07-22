@@ -1,0 +1,8 @@
+.body{
+	justify-content: center;
+	display: grid;
+}
+
+.meia{
+	display: inline-block;
+}
